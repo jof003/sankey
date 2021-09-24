@@ -23,7 +23,7 @@ sankey_diagram <- function(df, include_borders = TRUE) {
   ggplot2::ggplot(df_v2, ggplot2::aes(x = df_v2$year,
                                       y = df_v2$value,
                                       alluvium = df_v2$risk_factor,
-                                      stratum = risk_factor)) +
+                                      stratum = df_v2$risk_factor)) +
     # Adjust the alluvium (the connections between the stratums).
     ggalluvial::geom_alluvium(ggplot2::aes(fill = df_v2$risk_factor),
                               alpha = 1,
