@@ -1,22 +1,10 @@
----
-title: "sankey_diagram_usage"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{sankey_diagram_usage}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
----
-
-```{r, include = FALSE}
+## ---- include = FALSE---------------------------------------------------------
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
-```
 
-1. Install packages and import the data.
-
-```{r setup}
+## ----setup--------------------------------------------------------------------
 library(ggplot2)
 library(ggalluvial)
 library(reshape2)
@@ -24,24 +12,15 @@ library(readxl)
 
 df <- read_excel("../inst/extdata/Stacked_column_stroke_blacks_noAF.xlsx", sheet = "Data", range = "A1:F6")
 print.data.frame(df)
-```
 
-2. Transform the data set so that we have three columns: risk factor, year, and risk factor value estimates.
-
-```{r transform}
+## ----transform----------------------------------------------------------------
 df_v2 <-melt(df, id = "Risk Factors for Stroke in Blacks")
 names(df_v2) <- c("risk_factor", "year", "value")
-```
 
-3. Choose whether or not you'd like white borders surrounding the alluvium and stratum. A '1' indicates that you want borders, a '0' indicates that you do not want borders. Note that in the function, you indicate that you want borders by typing 'TRUE' (example: sankey_diagram(df, TRUE)).
-
-```{r border}
+## ----border-------------------------------------------------------------------
 borders <- 1
-```
 
-4. Create the diagram.
-
-```{r diagram}
+## ----diagram------------------------------------------------------------------
 ggplot(df_v2, aes(x = year, 
                   y = value, 
                   alluvium = risk_factor,
@@ -72,4 +51,4 @@ theme(legend.position = "none",
            panel.grid.minor = element_blank(),
            axis.text.y = element_blank(),
            axis.ticks = element_blank())
-```
+

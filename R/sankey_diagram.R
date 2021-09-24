@@ -1,11 +1,13 @@
-#' Sankey diagram of vascular risk factor contribution to stroke incidence from 1990 to 2010'
-#' @param df A dataframe of risk factors over time points
-#' @param include_borders The option to include white boarders around the alluvium and stratums or no boarders
-#' @export
-
 library(ggplot2)
 library(ggalluvial)
 library(reshape2)
+
+#' Sankey diagram
+#'
+#' @param df A dataframe of risk factors over time points
+#' @param include_borders The option to include white boarders around the alluvium and stratums or no boarders. Either TRUE or FALSE
+#' @export
+
 
 # The function to create a Sankey diagram chart, including the option to choose
 # whether white borders are wanted or not.
