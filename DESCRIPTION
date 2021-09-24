@@ -13,3 +13,7 @@ Imports:
   ggalluvial,
   reshape2
 RoxygenNote: 7.1.2
+Suggests: 
+    rmarkdown,
+    knitr
+VignetteBuilder: knitr
