@@ -41,7 +41,7 @@ sankey_diagram <- function(df, include_borders = TRUE) {
     # Change the colors of the diagram.
     ggplot2::scale_fill_manual(values = c("#CB6C56", "#CD925E", "#94B993", "#546C91", "#88ABC2")) +
     # Label the risk values onto the stratums.
-    ggplot2::geom_text(stat = "stratum", ggplot2::aes(label = df_v2$value), colour = "white", size = 3, fontface = "bold", decreasing = FALSE) +
+    ggplot2::geom_text(ggplot2::aes(label = df_v2$value), stat = "stratum",colour = "white", size = 3, fontface = "bold", decreasing = FALSE) +
     # Add the title.
     ggplot2::ggtitle("Risk Factor for Stroke in Blacks") +
     ggplot2::theme(plot.title = ggplot2::element_text(face = "bold", size = (10), hjust = 0.5, margin = ggplot2::margin(0,0,20,0))) +
@@ -49,7 +49,7 @@ sankey_diagram <- function(df, include_borders = TRUE) {
     ggplot2::scale_x_discrete(position = "top") +
     ggplot2::theme(axis.text.x = ggplot2::element_text(face = "bold", color = "black"), axis.title.x = ggplot2::element_blank()) +
     # Add the labels of the risk factors to the left of the graph and remove the axis label.
-    ggplot2::geom_text(stat = "stratum", ggplot2::aes(label = ifelse(df_v2$year == "1990", df_v2$risk_factor," ")), hjust = 0, nudge_x = -1.75, color = "black", size = 3,  decreasing = FALSE) +
+    ggplot2::geom_text(ggplot2::aes(label = ifelse(df_v2$year == "1990", df_v2$risk_factor," ")),stat = "stratum", hjust = 0, nudge_x = -1.75, color = "black", size = 3,  decreasing = FALSE) +
     ggplot2::theme(axis.title.y = ggplot2::element_blank()) +
     # Finally, remove the legend and background elements.
     ggplot2::theme(legend.position = "none",
