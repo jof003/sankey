@@ -1,6 +1,6 @@
 \name{sankey_diagram}
 \alias{sankey_diagram}
-\title{Sankey diagram}
+\title{Sankey diagram of vascular risk factor contribution to stroke incidence from 1990 to 2010}
 \description{Creates a Sankey diagram to present the vascular risk factor contribution to stroke incidence from years  1990 to 2010.}
 \usage{sankey_diagram(df, include_borders = TRUE)}
 \arguments{
