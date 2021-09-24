@@ -1,0 +1,15 @@
+Package: sankeydiagram
+Type: Package
+Title: Sankey diagram of vascular risk factor contribution to stroke incidence from 1990 to 2010
+Version: 0.1.0
+Author: Joanne Fil
+Maintainer: The package maintainer <jfil003@gmail.com>
+Description: Creates a Sankey diagram to present the vascular risk factor contribution to stroke incidence from years  1990 to 2010.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports:
+  ggplot2,
+  ggalluvial,
+  reshape2
+RoxygenNote: 7.1.2
