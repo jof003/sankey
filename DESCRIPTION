@@ -11,7 +11,8 @@ LazyData: true
 Imports:
   ggplot2,
   ggalluvial,
-  reshape2
+  reshape2,
+  readxl
 RoxygenNote: 7.1.2
 Suggests: 
     rmarkdown,

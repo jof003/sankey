@@ -22,7 +22,7 @@ library(ggalluvial)
 library(reshape2)
 library(readxl)
 
-df <- read_excel("Stacked_column_stroke_blacks_noAF.xlsx", sheet = "Data", range = "A1:F6")
+df <- read_excel("../inst/extdata/Stacked_column_stroke_blacks_noAF.xlsx", sheet = "Data", range = "A1:F6")
 print.data.frame(df)
 ```
 
